@@ -1,4 +1,4 @@
-from lic.loadtask.celery import app, conf
+from lic.loadtask.celery import app
 import os
 import gevent 
 
