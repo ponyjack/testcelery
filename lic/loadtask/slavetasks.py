@@ -1,7 +1,7 @@
 from lic.loadtask.celery import app
 import os
 import gevent 
-
+import time
 
 def forLog(dursion):
     now  = time.time()
