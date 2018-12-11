@@ -8,11 +8,14 @@ def forLog(dursion):
     while (time.time() - now<dursion):
         print "xxx"
         gevent.sleep(0)
+        print "bbbb"
+
 
 @app.task()
 def StartSpaw(xxx):
-    gevent.sleep(5)
-    gevent.spawn(forLog, xxx)
-
+    gevent.sleep(0)
+    for _ in range(20):
+        gevent.spawn(forLog, xxx)
+    gevent.sleep(0)
 
 
