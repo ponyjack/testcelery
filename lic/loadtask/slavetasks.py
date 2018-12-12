@@ -2,6 +2,11 @@ from lic.loadtask.celery import app
 import os
 import gevent 
 import time
+from multiprocessing import pool
+
+
+pool = Pool(processes=4)
+
 
 def forLog(dursion):
     now  = time.time()
@@ -13,9 +18,11 @@ def forLog(dursion):
 
 @app.task()
 def StartSpaw(xxx):
-    gevent.sleep(0)
-    for _ in range(20):
-        gevent.spawn(forLog, xxx)
-    gevent.sleep(0)
+    # gevent.sleep(0)
+    # for _ in range(20):
+    #     gevent.spawn(forLog, xxx)
+    # gevent.sleep(0)
+
+    pool.apply_async(forLog, (10,))      
 
 
