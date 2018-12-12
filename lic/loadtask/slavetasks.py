@@ -5,7 +5,7 @@ import time
 from multiprocessing import Pool
 
 
-pool = Pool(processes=4)
+pool = Pool(processes=1)
 
 
 def forLog(dursion):
