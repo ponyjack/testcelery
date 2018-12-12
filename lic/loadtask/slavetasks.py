@@ -2,7 +2,7 @@ from lic.loadtask.celery import app
 import os
 import gevent 
 import time
-from multiprocessing import pool
+from multiprocessing import Pool
 
 
 pool = Pool(processes=4)
