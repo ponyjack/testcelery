@@ -22,7 +22,7 @@ def StartSpaw(xxx):
     # for _ in range(20):
     #     gevent.spawn(forLog, xxx)
     # gevent.sleep(0)
-
+    time.sleep(20)
     pool.apply_async(forLog, (10,))      
 
 
