@@ -12,7 +12,7 @@ def forLog(dursion):
     now  = time.time()
     while (time.time() - now<dursion):
         print "xxx"
-        gevent.sleep(0)
+        # gevent.sleep(0)
         print "bbbb"
 
 
@@ -22,7 +22,7 @@ def StartSpaw(xxx):
     # for _ in range(20):
     #     gevent.spawn(forLog, xxx)
     # gevent.sleep(0)
-    time.sleep(20)
-    pool.apply_async(forLog, (10,))      
+#     time.sleep(20)
+    forLog(xxx)
 
 
