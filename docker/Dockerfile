@@ -7,4 +7,4 @@ RUN mkdir -p  /home/testcelery/
 
 
 WORKDIR  /home/testcelery/
-CMD celery -A lic.loadtask worker --loglevel=debug -P gevent --config=licconfig 
+CMD celery -A lic.loadtask worker --loglevel=debug -P gevent --config=licconfig -c 1
