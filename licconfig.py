@@ -5,4 +5,4 @@ CELERY_RESULT_BACKEND = 'redis://10.11.65.34:6379/2'
 
 # CELERYD_CONCURRENCY=1
 
-worker_enable_remote_control=False
+CELERY_ENABLE_REMOTE_CONTROL=False
