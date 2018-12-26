@@ -12,8 +12,7 @@ def forLog(dursion):
     now  = time.time()
     while (time.time() - now<dursion):
         print "xxx"
-        # gevent.sleep(0)
-        print "bbbb"
+        break
 
 
 @app.task()
