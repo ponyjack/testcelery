@@ -6,6 +6,7 @@ app = Celery(include=[ "lic.loadtask.slavetasks"])
 
 if not app.conf.broker_url:
     logging.info("sdfsdfsfsfsdfsfsfd")
+    1/0
     app.conf.broker_url = os.getenv("broker_url")
     app.conf.result_backend = os.getenv("result_backend")
     # if not app.conf.broker_url:
